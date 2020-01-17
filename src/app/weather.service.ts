@@ -13,8 +13,8 @@ export class WeatherService {
     this.url = 'http://api.openweathermap.org/data/2.5/forecast?q=';
   }
 
-  getWeather(city, code) {
-    return this.http.get(this.url + city + ',' + code + '&APPID=' + this.apiKey)
+  getWeather(city) {
+    return this.http.get(this.url + city + '&units=metric' + '&APPID=' + this.apiKey);
   }
 
 }

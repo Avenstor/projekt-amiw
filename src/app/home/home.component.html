@@ -1,1 +1,25 @@
-<p>home works!</p>
+<div class="container">
+
+  <div class="jumbotron">
+
+    <h2>City: {{weather.city.name}} | Country: {{weather.city.country}}</h2>
+    <h4>Latitude: {{weather.city.coord.lat}} | Longtitude: {{weather.city.coord.lon}}</h4>
+    <p><br></p>
+    <h2>Weather today ({{weather.list[0].dt_txt}} UTC):</h2>
+    <h4>Weather condition: {{weather.list[0].weather[0].main}} - {{weather.list[0].weather[0].description}}</h4>
+    <h4>Temperature: {{weather.list[0].main.temp}}°C</h4>
+    <h4>Pressure: {{weather.list[0].main.pressure}} hPa</h4>
+    <h4>Wind speed: {{weather.list[0].wind.speed}} m/s</h4>
+    <h4>Humidity:  {{weather.list[0].main.humidity}}% | Cloudiness: {{weather.list[0].clouds.all}}%</h4>
+    <p><br></p>
+    <h2>Weather tomorrow ({{weather.list[8].dt_txt}} UTC):</h2>
+    <h4>Weather condition: {{weather.list[8].weather[0].main}} - {{weather.list[8].weather[0].description}}</h4>
+    <h4>Temperature: {{weather.list[8].main.temp}}°C</h4>
+    <h4>Pressure: {{weather.list[8].main.pressure}} hPa</h4>
+    <h4>Wind speed: {{weather.list[8].wind.speed}} m/s</h4>
+    <h4>Humidity:  {{weather.list[8].main.humidity}}% | Cloudiness: {{weather.list[8].clouds.all}}%</h4>
+  </div>
+
+
+
+</div>

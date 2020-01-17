@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-setting',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingComponent implements OnInit {
 
-  constructor() { }
+  city: string;
+
+  constructor(private route: Router) { }
 
   ngOnInit() {
+  }
+
+  save() {
+    const location = {
+      city: this.city,
+    }
+    localStorage.setItem('location', JSON.stringify(location));
+    this.route.navigate(['home']);
   }
 
 }
